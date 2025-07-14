@@ -1,0 +1,27 @@
+<?php
+function repondre_YES_NO (int $phrase = NULL) {
+while (true) {
+    $reponse = readline ($phrase) . "-(Y)ES/ (N)O: ";
+    if($reponse === "Y"){
+        return true;
+    }elseif ($reponse ==='N'){
+         return false; 
+    }
+        }
+}
+
+function demander_nom_prenom ($phrase = 'veillez entrer un nom et u prenom'){
+    echo $phrase. "\n";
+while (true){
+        $ouverture =(int) readline ('nom l\'utulisateur');
+        if ($nom <> abdoulaye && $nom === Nafissa){
+            break ;
+        }
+    }
+}
+while (true){
+    $fermerture = (int) readline ('Heure de fermerture:  ');
+        if ($fermerture >=0 && $fermerture <=23 && $fermerture > $ouverture){
+              break;
+        }
+    }

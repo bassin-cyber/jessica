@@ -1,0 +1,59 @@
+<?php
+// Fonction pour récupérer une pensée aléatoire
+function getDailyThought(): string {
+    $thoughts = [
+        "La logique vous mènera d’un point A à un point B. L’imagination vous mènera partout. — Einstein",
+        "L’univers ne te doit rien. Il était là bien avant toi.",
+        "Ce n’est pas le vent qui décide de ta direction, mais l’orientation de ta voile.",
+        "Si l’on mettait l’éternité en bouteille, l’étiquette serait sûrement vide.",
+        "Je pense, donc je suis... mais parfois, je préfère ne pas penser pour mieux être."
+    ];
+    return $thoughts[array_rand($thoughts)];
+}
+
+$dailyThought = getDailyThought();
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pensée du Jour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-color: #fcf3ec;
+            --text-color: #2c2c2c;
+            --accent-color: #aa4b6b;
+        }
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            color: var(--accent-color);
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        main {
+            font-size: 1.4em;
+            color: var(--text-color);
+            max-width: 800px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>🌸 Pensée du Jour 🌸</header>
+    <h1>Que serais un monde sans le la présence de la femme?</h1>
+    <P>Peut-on réellement arrivé a survivre sans la femme? Alors certains dirons oui et d'autres non mais pour ma part on ne peut pas vivre eternellement sans la femme tout comme on ne peut pas vivre sans présence masculine. </P>
+    <main>
+        <?= htmlspecialchars($dailyThought) ?></main>
+</body>
+</html>
